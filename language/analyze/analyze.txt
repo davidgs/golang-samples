@@ -1,0 +1,13 @@
+Seasons Greetings!
+
+Guess what? <name> has written me a letter asking for a few things. As I've now retired to a beach in Thailand, I thought maybe you'd like to know what <name> asked for. Here's the letter:
+
+<letter>
+
+I've taken the liberty of figuring out which things they want most, and provided you with a list so that you can just purchase these items directly. I know, it's put the elves out of work, but they're a resourceful lot and will undoubtedly figure out something to do with themselves. And no, they are not available for purchase.
+
+So, that list:
+
+<list> with links
+
+All the best from me and Mrs. Claus!

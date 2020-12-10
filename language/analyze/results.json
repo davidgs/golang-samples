@@ -1,0 +1,1211 @@
+{
+  "request_info": {
+    "success": true,
+    "credits_used": 1,
+    "credits_remaining": 99
+  },
+  "request_metadata": {
+    "created_at": "2020-12-04T19:49:23.738Z",
+    "processed_at": "2020-12-04T19:49:30.048Z",
+    "total_time_taken": 6.31,
+    "amazon_url": "https://www.amazon.com/s/?k=Magic+Mouse&ref=nb_sb_noss_2",
+    "timing": [
+      "global_init - 0ms (total 0ms)",
+      "auth_apikey - 19ms (total 19ms)",
+      "auth_retrieve_plan - 5ms (total 24ms)",
+      "auth_retrieve_credit_usage - 8ms (total 33ms)",
+      "processing_invoking_worker - 0ms (total 34ms)",
+      "processing_execution_complete - 6310ms (total 6344ms)",
+      "auth_credit_usage_reconcile - 11ms (total 6356ms)",
+      "global_end - 0ms (total 6356ms)"
+    ]
+  },
+  "request_parameters": {
+    "amazon_domain": "amazon.com",
+    "type": "search",
+    "search_term": "Magic Mouse"
+  },
+  "search_results": [
+    {
+      "position": 1,
+      "title": "Apple Magic Mouse 2 (Wireless, Rechargable) - Silver",
+      "asin": "B016QO5YNG",
+      "link": "https://www.amazon.com/dp/B016QO5YNG",
+      "availability": {
+        "raw": "In stock on January 1, 2021."
+      },
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/41fVVAi1UiL._AC_UY218_.jpg",
+      "is_prime": false,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.7,
+      "ratings_total": 15973,
+      "sponsored": true,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 79,
+          "currency": "USD",
+          "raw": "$79.00"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 79,
+        "currency": "USD",
+        "raw": "$79.00"
+      },
+      "delivery": {
+        "price": {
+          "raw": "FREE Shipping by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 2,
+      "title": "Apple Magic Trackpad 2 (Wireless, Rechargable) - Silver",
+      "asin": "B016QO5YWC",
+      "link": "https://www.amazon.com/dp/B016QO5YWC",
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/41MRWL+FZKL._AC_UY218_.jpg",
+      "bestseller": {
+        "link": "https://www.amazon.com/gp/bestsellers/pc/284719/ref=sr_bs_1_284719_1",
+        "category": "Computer Touch Padsin Computer Touch Pads"
+      },
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.8,
+      "ratings_total": 3723,
+      "sponsored": true,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 123.99,
+          "currency": "USD",
+          "raw": "$123.99"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 123.99,
+        "currency": "USD",
+        "raw": "$123.99"
+      },
+      "delivery": {
+        "tagline": "Get it as soon as Mon, Dec 14",
+        "price": {
+          "raw": "FREE Shipping by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 3,
+      "title": "Apple Magic Mouse 2 (Wireless, Rechargable) - Silver",
+      "asin": "B016QO5YNG",
+      "link": "https://www.amazon.com/dp/B016QO5YNG",
+      "availability": {
+        "raw": "In stock on January 1, 2021."
+      },
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/41fVVAi1UiL._AC_UY218_.jpg",
+      "is_prime": false,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.7,
+      "ratings_total": 15973,
+      "sponsored": false,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 79,
+          "currency": "USD",
+          "raw": "$79.00"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 79,
+        "currency": "USD",
+        "raw": "$79.00"
+      },
+      "delivery": {
+        "price": {
+          "raw": "FREE Shipping by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 4,
+      "title": "Apple Magic Bluetooth Wireless Laser Mouse - A1296 (Renewed)",
+      "asin": "B0145NHF5K",
+      "link": "https://www.amazon.com/dp/B0145NHF5K",
+      "availability": {
+        "raw": "Only 1 left in stock - order soon."
+      },
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/41teXV9y1dL._AC_UY218_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.2,
+      "ratings_total": 1074,
+      "sponsored": false,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 69.99,
+          "currency": "USD",
+          "raw": "$69.99"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 69.99,
+        "currency": "USD",
+        "raw": "$69.99"
+      },
+      "delivery": {
+        "tagline": "Get it as soon as Thu, Dec 10",
+        "price": {
+          "raw": "FREE Shipping by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 5,
+      "title": "Bluetooth Mouse Rechargeable Wireless Mouse for MacBook Pro,Bluetooth Wireless Mouse for Laptop PC Computer (Gray)",
+      "asin": "B07L6MMFPJ",
+      "link": "https://www.amazon.com/dp/B07L6MMFPJ",
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61ld2hJaN5L._AC_UY218_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.4,
+      "ratings_total": 5940,
+      "sponsored": false,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 13.89,
+          "currency": "USD",
+          "raw": "$13.89"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 13.89,
+        "currency": "USD",
+        "raw": "$13.89"
+      },
+      "delivery": {
+        "tagline": "Get it as soon as Wed, Dec 9",
+        "price": {
+          "raw": "FREE Shipping on orders over $25 shipped by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 6,
+      "title": "Apple Wireless Keyboard with Apple Magic Bluetooth Mouse (Renewed)",
+      "asin": "B0143BNIXW",
+      "link": "https://www.amazon.com/dp/B0143BNIXW",
+      "availability": {
+        "raw": "Only 19 left in stock - order soon."
+      },
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61Cxik5MnPL._AC_UY218_.jpg",
+      "is_prime": false,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.2,
+      "ratings_total": 661,
+      "sponsored": false,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 209,
+          "currency": "USD",
+          "raw": "$209.00"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 209,
+        "currency": "USD",
+        "raw": "$209.00"
+      },
+      "delivery": {
+        "price": {
+          "raw": "FREE Shipping",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 7,
+      "title": "Apple Wireless Magic Keyboard 2 -MLA22LL/A with Apple Magic Bluetooth Mouse 2 -MLA02LL/A (Renewed)",
+      "asin": "B01N59VJED",
+      "link": "https://www.amazon.com/dp/B01N59VJED",
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/71yuoMnx8jL._AC_UY218_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.5,
+      "ratings_total": 777,
+      "sponsored": false,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 189.98,
+          "currency": "USD",
+          "raw": "$189.98"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 189.98,
+        "currency": "USD",
+        "raw": "$189.98"
+      },
+      "delivery": {
+        "tagline": "Get it as soon as Fri, Dec 11",
+        "price": {
+          "raw": "FREE Shipping by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 8,
+      "title": "Microsoft Surface Arc Mouse, Light Grey - CZV-00001",
+      "asin": "B071DTNNL7",
+      "link": "https://www.amazon.com/dp/B071DTNNL7",
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61WRisZV6hL._AC_UY218_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.6,
+      "ratings_total": 6643,
+      "sponsored": false,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 62,
+          "currency": "USD",
+          "raw": "$62.00",
+          "name": "primary"
+        },
+        {
+          "symbol": "$",
+          "value": 79.99,
+          "currency": "USD",
+          "raw": "$79.99",
+          "name": "original"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 62,
+        "currency": "USD",
+        "raw": "$62.00",
+        "name": "primary"
+      },
+      "delivery": {
+        "tagline": "Get it as soon as Wed, Dec 9",
+        "price": {
+          "raw": "FREE Shipping by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 9,
+      "title": "Rechargeable Wireless Mouse for Laptop Mac MacBook pro MacBook Air Laptop Windows iMac Desktop (White)",
+      "asin": "B07PXSN8JY",
+      "link": "https://www.amazon.com/dp/B07PXSN8JY",
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/714v0uO7S0L._AC_UY218_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.1,
+      "ratings_total": 6149,
+      "sponsored": false,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 13.66,
+          "currency": "USD",
+          "raw": "$13.66"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 13.66,
+        "currency": "USD",
+        "raw": "$13.66"
+      },
+      "delivery": {
+        "tagline": "Get it as soon as Wed, Dec 9",
+        "price": {
+          "raw": "FREE Shipping on orders over $25 shipped by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 10,
+      "title": "Logitech MX Master 3 Advanced Wireless Mouse - Graphite",
+      "asin": "B07S395RWD",
+      "link": "https://www.amazon.com/dp/B07S395RWD",
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/614w3LuZTYL._AC_UY218_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.7,
+      "ratings_total": 4981,
+      "sponsored": false,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 99.99,
+          "currency": "USD",
+          "raw": "$99.99"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 99.99,
+        "currency": "USD",
+        "raw": "$99.99"
+      },
+      "delivery": {
+        "tagline": "Get it as soon as Wed, Dec 9",
+        "price": {
+          "raw": "FREE Shipping by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 11,
+      "title": "Apple Magic Trackpad 2 (Wireless, Rechargable) - Silver",
+      "asin": "B016QO5YWC",
+      "link": "https://www.amazon.com/dp/B016QO5YWC",
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/41MRWL+FZKL._AC_UY218_.jpg",
+      "bestseller": {
+        "link": "https://www.amazon.com/gp/bestsellers/pc/284719/ref=sr_bs_10_284719_1",
+        "category": "Computer Touch Padsin Computer Touch Pads"
+      },
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.8,
+      "ratings_total": 3723,
+      "sponsored": false,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 123.99,
+          "currency": "USD",
+          "raw": "$123.99"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 123.99,
+        "currency": "USD",
+        "raw": "$123.99"
+      },
+      "delivery": {
+        "tagline": "Get it as soon as Mon, Dec 14",
+        "price": {
+          "raw": "FREE Shipping by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 12,
+      "title": "Apple Magic Keyboard with Numeric Keypad, Wireless - Space Gray (Renewed)",
+      "asin": "B082C15S5L",
+      "link": "https://www.amazon.com/dp/B082C15S5L",
+      "availability": {
+        "raw": "Only 3 left in stock - order soon."
+      },
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/41vWsZkCojL._AC_UY218_.jpg",
+      "is_prime": false,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.6,
+      "ratings_total": 131,
+      "sponsored": false,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 109,
+          "currency": "USD",
+          "raw": "$109.00",
+          "name": "primary"
+        },
+        {
+          "symbol": "$",
+          "value": 139,
+          "currency": "USD",
+          "raw": "$139.00",
+          "name": "original"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 109,
+        "currency": "USD",
+        "raw": "$109.00",
+        "name": "primary"
+      },
+      "delivery": {
+        "price": {
+          "raw": "FREE Shipping",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 13,
+      "title": "Silicone Case Cover Protective Skin for Magic Mouse 1/2 Silicone Case for Apple Magic iPad Mouse (Black)",
+      "asin": "B08CGPV3D6",
+      "link": "https://www.amazon.com/dp/B08CGPV3D6",
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/71a4J0WQ0NL._AC_UY218_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.7,
+      "ratings_total": 90,
+      "sponsored": false,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 10.99,
+          "currency": "USD",
+          "raw": "$10.99"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 10.99,
+        "currency": "USD",
+        "raw": "$10.99"
+      },
+      "delivery": {
+        "tagline": "Get it as soon as Thu, Dec 10",
+        "price": {
+          "raw": "FREE Shipping on orders over $25 shipped by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 14,
+      "title": "Rechargeable Wireless Mouse for MacBook pro Bluetooth Mouse for MacBook pro Air Laptop MacBook Mac Windows (White)",
+      "asin": "B07X3W387B",
+      "link": "https://www.amazon.com/dp/B07X3W387B",
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/51kQfRBc6NL._AC_UY218_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.2,
+      "ratings_total": 2226,
+      "sponsored": false,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 12.89,
+          "currency": "USD",
+          "raw": "$12.89"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 12.89,
+        "currency": "USD",
+        "raw": "$12.89"
+      },
+      "delivery": {
+        "tagline": "Get it as soon as Thu, Dec 10",
+        "price": {
+          "raw": "FREE Shipping on orders over $25 shipped by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 15,
+      "title": "MELLO Silicone Cushion for Apple Magic Mouse 1 & 2 (Pinot Red)",
+      "asin": "B087B4WT9N",
+      "link": "https://www.amazon.com/dp/B087B4WT9N",
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/71vNxR81z0L._AC_UY218_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.6,
+      "ratings_total": 25,
+      "sponsored": false,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 14.95,
+          "currency": "USD",
+          "raw": "$14.95"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 14.95,
+        "currency": "USD",
+        "raw": "$14.95"
+      },
+      "delivery": {
+        "tagline": "Get it as soon as Wed, Dec 9",
+        "price": {
+          "raw": "FREE Shipping on orders over $25 shipped by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 16,
+      "title": "Elastic Dust Cover Sleeve for Apple Magic Mouse 1 & 2, Anti-Scratch Silicone Protective Cover Storage Carrying Case Bag",
+      "asin": "B08C5L9RGZ",
+      "link": "https://www.amazon.com/dp/B08C5L9RGZ",
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61+FiXnaM2L._AC_UY218_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.2,
+      "ratings_total": 113,
+      "sponsored": false,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 13.99,
+          "currency": "USD",
+          "raw": "$13.99"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 13.99,
+        "currency": "USD",
+        "raw": "$13.99"
+      },
+      "delivery": {
+        "tagline": "Get it as soon as Wed, Dec 9",
+        "price": {
+          "raw": "FREE Shipping on orders over $25 shipped by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 17,
+      "title": "Wireless Mouse for MacBook Pro MacBook Air Laptop Mac iMac Desktop Computer (Gray)",
+      "asin": "B07RPXN7JH",
+      "link": "https://www.amazon.com/dp/B07RPXN7JH",
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/51-JuZFN2oL._AC_UY218_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.3,
+      "ratings_total": 1734,
+      "sponsored": false,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 13.66,
+          "currency": "USD",
+          "raw": "$13.66"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 13.66,
+        "currency": "USD",
+        "raw": "$13.66"
+      },
+      "delivery": {
+        "tagline": "Get it as soon as Wed, Dec 9",
+        "price": {
+          "raw": "FREE Shipping on orders over $25 shipped by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 18,
+      "title": "Magic Grips for Apple Magic Mouse 1 & 2 - [Improves Comfort, widens Grip, Gives You More Control]",
+      "asin": "B01MT7EN0F",
+      "link": "https://www.amazon.com/dp/B01MT7EN0F",
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/81t1Q4FPSsL._AC_UY218_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.6,
+      "ratings_total": 800,
+      "sponsored": false,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 14.95,
+          "currency": "USD",
+          "raw": "$14.95"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 14.95,
+        "currency": "USD",
+        "raw": "$14.95"
+      },
+      "delivery": {
+        "tagline": "Get it as soon as Wed, Dec 9",
+        "price": {
+          "raw": "FREE Shipping on orders over $25 shipped by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 19,
+      "title": "Weller Heat Resistant Gloves, One Size (WLACCSG-02)",
+      "asin": "B08FPZSPBD",
+      "link": "https://www.amazon.com/dp/B08FPZSPBD",
+      "availability": {
+        "raw": "Temporarily out of stock."
+      },
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/91ahhhcrE0L._AC_UY218_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 3.6,
+      "ratings_total": 13,
+      "sponsored": true,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 14.9,
+          "currency": "USD",
+          "raw": "$14.90"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 14.9,
+        "currency": "USD",
+        "raw": "$14.90"
+      },
+      "delivery": {
+        "price": {
+          "raw": "FREE Shipping on orders over $25 shipped by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 20,
+      "title": "【Upgrade】LED Wireless Mouse, Rechargeable Slim Silent Mouse 2.4G Portable Mobile Optical Office Mouse with USB & Type-c Receiver, 3 Adjustable DPI for Notebook, PC, Laptop, Computer, MacBook (Silver)",
+      "asin": "B088NC5XLZ",
+      "link": "https://www.amazon.com/dp/B088NC5XLZ",
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/616tHYuazdL._AC_UY218_.jpg",
+      "coupon": {
+        "badge_text": "Save $4.00",
+        "text": "with coupon"
+      },
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.5,
+      "ratings_total": 2810,
+      "sponsored": true,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 15.99,
+          "currency": "USD",
+          "raw": "$15.99"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 15.99,
+        "currency": "USD",
+        "raw": "$15.99"
+      },
+      "delivery": {
+        "tagline": "Get it as soon as Thu, Dec 10",
+        "price": {
+          "raw": "FREE Shipping on orders over $25 shipped by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 21,
+      "title": "Bluetooth Wireless Mouse, Easy Switch to 3 Device, Vssoplor Rechargeable Type C Mouse Compatible with MacBook, Laptop, Windows Mac OS Quiet Clicking Mouse-White and Silver",
+      "asin": "B07PM242FX",
+      "link": "https://www.amazon.com/dp/B07PM242FX",
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61R-HxwS+zL._AC_UY218_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.6,
+      "ratings_total": 1302,
+      "sponsored": true,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 12.99,
+          "currency": "USD",
+          "raw": "$12.99"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 12.99,
+        "currency": "USD",
+        "raw": "$12.99"
+      },
+      "delivery": {
+        "tagline": "Get it as soon as Wed, Dec 9",
+        "price": {
+          "raw": "FREE Shipping on orders over $25 shipped by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    },
+    {
+      "position": 22,
+      "title": "Energizer Rechargeable AA Batteries, NiMH, 2000 mAh, Pre-Charged, 4 count (Recharge Universal) - Packaging May Vary",
+      "asin": "B009NEKAEK",
+      "link": "https://www.amazon.com/dp/B009NEKAEK",
+      "availability": {
+        "raw": "In stock on December 11, 2020."
+      },
+      "categories": [
+        {
+          "name": "All Departments"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/81G3L7AsPVL._AC_UY218_.jpg",
+      "is_prime": false,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.7,
+      "ratings_total": 14200,
+      "sponsored": true,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 10.98,
+          "currency": "USD",
+          "raw": "$10.98",
+          "name": "primary"
+        },
+        {
+          "symbol": "$",
+          "value": 12.99,
+          "currency": "USD",
+          "raw": "$12.99",
+          "name": "original"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 10.98,
+        "currency": "USD",
+        "raw": "$10.98",
+        "name": "primary"
+      },
+      "delivery": {
+        "price": {
+          "raw": "FREE Shipping on orders over $25 shipped by Amazon",
+          "symbol": "$",
+          "currency": "USD",
+          "value": 0,
+          "is_free": true
+        }
+      }
+    }
+  ],
+  "pagination": {
+    "total_results": 1000,
+    "current_page": 1,
+    "total_pages": 20
+  },
+  "refinements": {
+    "prime": [
+      {
+        "name": "Free Shipping by Amazon",
+        "value": "p_76/1249137011"
+      }
+    ],
+    "departments": [
+      {
+        "name": "Computer Keyboards, Mice & Accessories",
+        "value": "n/11548956011"
+      },
+      {
+        "name": "Computer Mice",
+        "value": "n/11036491"
+      },
+      {
+        "name": "Computer Keyboard & Mouse Combos",
+        "value": "n/1194464"
+      },
+      {
+        "name": "Computer Keyboards",
+        "value": "n/12879431"
+      },
+      {
+        "name": "Computer Input Devices",
+        "value": "n/172493"
+      },
+      {
+        "name": "Computer Touch Pads",
+        "value": "n/284719"
+      },
+      {
+        "name": "Electronics",
+        "value": "n/172282"
+      },
+      {
+        "name": "Office Products",
+        "value": "n/1064954"
+      },
+      {
+        "name": "Cell Phones & Accessories",
+        "value": "n/2335752011"
+      },
+      {
+        "name": "Toys & Games",
+        "value": "n/165793011"
+      },
+      {
+        "name": "Home & Business Services",
+        "value": "n/8098158011"
+      },
+      {
+        "name": "Home & Kitchen",
+        "value": "n/1055398"
+      },
+      {
+        "name": "Industrial & Scientific",
+        "value": "n/16310091"
+      },
+      {
+        "name": "Tools & Home Improvement",
+        "value": "n/228013"
+      },
+      {
+        "name": "Everything Else",
+        "value": "n/10272111"
+      },
+      {
+        "name": "Garden & Outdoor",
+        "value": "n/2972638011"
+      },
+      {
+        "name": "Prime Video",
+        "value": "n/2858778011"
+      }
+    ],
+    "reviews": [
+      {
+        "name": "4 Stars & Up",
+        "value": "p_72/1248879011"
+      },
+      {
+        "name": "3 Stars & Up",
+        "value": "p_72/1248880011"
+      },
+      {
+        "name": "2 Stars & Up",
+        "value": "p_72/1248881011"
+      },
+      {
+        "name": "1 Star & Up",
+        "value": "p_72/1248882011"
+      }
+    ],
+    "price": [
+      {
+        "name": "Under $25",
+        "value": "p_36/1253503011"
+      },
+      {
+        "name": "$25 to $50",
+        "value": "p_36/1253504011"
+      },
+      {
+        "name": "$50 to $100",
+        "value": "p_36/1253505011"
+      },
+      {
+        "name": "$100 to $200",
+        "value": "p_36/1253506011"
+      },
+      {
+        "name": "$200 & Above",
+        "value": "p_36/1253507011"
+      },
+      {
+        "name": "Today's Deals",
+        "value": "p_n_specials_match/21213697011"
+      }
+    ],
+    "pc_mouse_feature": [
+      {
+        "name": "Laser",
+        "value": "p_n_feature_browse-bin/3092700011"
+      },
+      {
+        "name": "Mac Compatible",
+        "value": "p_n_feature_browse-bin/21162158011"
+      },
+      {
+        "name": "Notebook",
+        "value": "p_n_feature_browse-bin/3092701011"
+      },
+      {
+        "name": "Optical",
+        "value": "p_n_feature_browse-bin/3092702011"
+      },
+      {
+        "name": "Wireless",
+        "value": "p_n_feature_browse-bin/3092704011"
+      }
+    ],
+    "keyboard_and_mouse_interface": [
+      {
+        "name": "Bluetooth",
+        "value": "p_n_feature_six_browse-bin/21162154011"
+      },
+      {
+        "name": "USB",
+        "value": "p_n_feature_six_browse-bin/21162156011"
+      },
+      {
+        "name": "Wireless",
+        "value": "p_n_feature_six_browse-bin/21162157011"
+      }
+    ],
+    "from_our_brands": [
+      {
+        "name": "Our Brands",
+        "value": "p_n_feature_forty-seven_browse-bin/21180942011"
+      }
+    ],
+    "packaging_option": [
+      {
+        "name": "Frustration-Free Packaging",
+        "value": "p_n_is_ffp/7252855011"
+      }
+    ],
+    "new_and_upcoming": [
+      {
+        "name": "New Arrivals",
+        "value": "p_n_date/1249033011"
+      },
+      {
+        "name": "Coming Soon",
+        "value": "p_n_date/1249034011"
+      }
+    ],
+    "certification": [
+      {
+        "name": "Energy Star",
+        "value": "p_n_special_merchandising_browse-bin/544495011"
+      }
+    ],
+    "amazon_global_store": [
+      {
+        "name": "Amazon Global Store",
+        "value": "p_n_global_store_origin_marketplace/16354393011"
+      }
+    ],
+    "international_shipping": [
+      {
+        "name": "International Shipping Eligible",
+        "value": "p_n_shipping_option-bin/3242350011"
+      }
+    ]
+  }
+}%
