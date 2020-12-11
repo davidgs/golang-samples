@@ -65,6 +65,7 @@ func santa(w http.ResponseWriter, r *http.Request) {
 		log.Println("GET Method Not Supported")
 		http.Error(w, "GET Method not supported", 400)
 	} else {
+		fmt.Println("Got a POST!")
 		body, err := ioutil.ReadAll(r.Body)
 		if err != nil {
 			panic(err)
@@ -78,7 +79,7 @@ func santa(w http.ResponseWriter, r *http.Request) {
 		log.Println(t.Letter)
 		w.WriteHeader(200)
 		client := camundaclientgo.NewClient(camundaclientgo.ClientOptions{
-			EndpointUrl: "http://localhost:8000/engine-rest",
+			EndpointUrl: "http://davidgs.com:8080/engine-rest",
 			ApiUser:     "demo",
 			ApiPassword: "demo",
 			Timeout:     time.Second * 10,
@@ -111,13 +112,15 @@ func searchAmazon(gResult camundaclientgo.Variable) (camundaclientgo.Variable, e
 		return searches, err
 	}
 	Url.Path += "/s"
-	parameters := url.Values{}
-	Url.RawQuery = parameters.Encode()
+
+
 	var giftLookup Gift
 	json.Unmarshal([]byte(fmt.Sprintf("%v", gResult.Value)), &giftLookup)
 	for x := 0; x < len(giftLookup); x++ {
 		giftLookup[x].Amazon = make([]string, len(giftLookup[x].Gifts))
 		for y := 0; y < len(giftLookup[x].Gifts); y++ {
+			parameters := url.Values{}
+			// Url.RawQuery = parameters.Encode()
 			fmt.Printf("Gift: %s\tType: %s\tSentiment: %d\n", giftLookup[x].Gifts[y], giftLookup[x].Types[y], giftLookup[x].Sentiments[y])
 			parameters.Add("k", giftLookup[x].Gifts[y])
 			Url.RawQuery = parameters.Encode()
@@ -142,38 +145,41 @@ func searchAmazon(gResult camundaclientgo.Variable) (camundaclientgo.Variable, e
 
 func sendEmail(vars map[string]camundaclientgo.Variable) (bool, error) {
 	var letterBody strings.Builder
-	fmt.Fprintf(&letterBody, "Seasons Greetings!\n\nGuess what? %s has written me a letter asking for a few things. As I've now retired to a beach in Thailand, I thought maybe you'd like to know what %s asked for. Here's the letter:\n\n\t\"%s\"\n\n", fmt.Sprintf("%v", vars["name"].Value), fmt.Sprintf("%v", vars["name"].Value), fmt.Sprintf("%v", vars["letter"].Value))
+	fmt.Fprintf(&letterBody, "<p>Seasons Greetings!</p>\n<p></p>\n<p>Guess what? %s has written me a letter asking for a few things. As I've now retired to a beach in Thailand, I thought maybe you'd like to know what %s asked for. Here's the letter:</p>\n<p></p>\n<blockquote><i>\"%s\"</i></blockquote>\n<p></p>\n", fmt.Sprintf("%v", vars["name"].Value), fmt.Sprintf("%v", vars["name"].Value), fmt.Sprintf("%v", vars["letter"].Value))
 
-	fmt.Fprintf(&letterBody, "I've taken the liberty of figuring out which things they want most, and provided you with a list so that you can just purchase these items directly. I know, it's put the elves out of work, but they're a resourceful lot and will undoubtedly figure out something to do with themselves. And no, they are not available for purchase.\n\nSo, that list:\n\n")
+	fmt.Fprintf(&letterBody, "<p>I've taken the liberty of figuring out which things they want most, and provided you with a list so that you can just purchase these items directly. I know, it's put the elves out of work, but they're a resourceful lot and will undoubtedly figure out something to do with themselves. And no, they are not available for purchase.</p>\n<p>So, that list:</p>\n<p></p>\n<od>\n")
 	var giftLookup Gift
 	json.Unmarshal([]byte(fmt.Sprintf("%v", vars["links"].Value)), &giftLookup)
-	giftNo := 1
 	for x := 0; x < len(giftLookup); x++ {
 		for y := 0; y < len(giftLookup[x].Gifts); y++ {
-			fmt.Fprintf(&letterBody, "\t%d) %s %s ", giftNo, giftLookup[x].Gifts[y], giftLookup[x].Amazon[y])
-			if giftLookup[x].Sentiments[y] < 0 {
-				letterBody.WriteString("(they didn't seem overly enthusiastic about this one).\n")
-			} else if giftLookup[x].Sentiments[y] == 0 {
-				letterBody.WriteString("(they seem neutral about this).\n")
-			} else if giftLookup[x].Sentiments[y] > 0 && giftLookup[x].Sentiments[y] < 5 {
-				letterBody.WriteString("(they're pretty enthusiastic about this one).\n")
+			if giftLookup[x].Gifts[y] == "" {
+				continue
 			} else {
-				letterBody.WriteString("(they're very excited about this!).\n")
+			fmt.Fprintf(&letterBody, "<li> <a href=\"%s\">%s</a> ", giftLookup[x].Amazon[y], giftLookup[x].Gifts[y])
+			if giftLookup[x].Sentiments[y] < 0 {
+				letterBody.WriteString(" ⚠️</li>\n")
+			} else if giftLookup[x].Sentiments[y] == 0 {
+				letterBody.WriteString(" ⁉️</li>\n")
+			} else if giftLookup[x].Sentiments[y] > 0 && giftLookup[x].Sentiments[y] < 5 {
+				letterBody.WriteString(" ❗️</li>\n")
+			} else {
+				letterBody.WriteString(" ‼️</li>\n")
 			}
-			giftNo++
 		}
 	}
-	fmt.Fprintf(&letterBody, "\n\nAll the best from me and Mrs. Claus!\n")
+	}
+	fmt.Fprintf(&letterBody, "</ol>\n<p></p>\n<p>In case you're wondering, since I'm retired, I'm also lazy. So I've used some Artificial Intelligence (which really isn't all that intelligent) to sort of 'rate' what they asked for. I <i>could</i> have ordered the list, but as I just told you, I'm retired, and lazy. Here's the rating system:</p><p><blockquote><ul><li>⚠️: meh.</li><li>⁉️: Ok, I guess.</li><li>❗: Now we're talkin!</li><li>‼️: Oh please! Oh Please! Oh please!</li></ul></blockquote><p></p><p>All the best from me and Mrs. Claus</p>\n--\n<p>PS: Please don't write back to this email address. I'm retired!</p><p><a href=\"https://write-a-letter-to-santa.org/\">Write your own letter!</a>\n")
 	emailAddr := vars["email"].Value
 	fmt.Println("To: : ", fmt.Sprintf("%v", emailAddr))
 	fmt.Println("Try sending mail...")
 
 	d := mail.Dialer{Host: "www.write-a-letter-to-santa.org", Port: 25, Username: "santa", Password: "Toby66.Mime!"}
 	m := mail.NewMessage()
-	m.SetHeader("From", m.FormatAddress("santa@write-a-letter-to-santa.org", "Santa Claus"))
+	m.SetHeader("From", m.FormatAddress("no-reply@write-a-letter-to-santa.org", "Santa Claus"))
 	m.SetHeader("To", fmt.Sprintf("%v", emailAddr))
 	m.SetHeader("Subject", "A Letter from Santa")
-	m.SetBody("text/plain", letterBody.String())
+	m.SetBody("text/html", letterBody.String())
+	// m.SetBody("text/plain", letterBody.String())
 	if err := d.DialAndSend(m); err != nil {
 		return false, err
 	}
@@ -184,7 +190,7 @@ func sendEmail(vars map[string]camundaclientgo.Variable) (bool, error) {
 func main() {
 	fmt.Println("Starting up ... ")
 	client := camundaclientgo.NewClient(camundaclientgo.ClientOptions{
-		EndpointUrl: "http://write-a-letter-to-santa:8080/engine-rest",
+		EndpointUrl: "http://davidgs.com:8080/engine-rest",
 		// ApiUser:     "demo",
 		// ApiPassword: "demo",
 		Timeout: time.Second * 10,
@@ -277,7 +283,7 @@ func main() {
 	fmt.Println("Done setting up Proc.")
 
 	http.HandleFunc("/santa", santa)
-	err := http.ListenAndServe(":9091", nil) // set listen port
+err := http.ListenAndServeTLS(":9091", "/home/santa/ssl/certs/write_a_letter_to_santa_org_c1658_d7935_1639094399_401612a37d185ba05e8f3444da857270.crt", "/home/santa/ssl/keys/c1658_d7935_22cc5119c03ebb38ab5995713e2e2d21.key", nil) // set listen port
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err)
 	}
@@ -320,11 +326,16 @@ func analyze(letter string) (camundaclientgo.Variable, error) {
 		gifts[x].Sentiments = make([]int, len(entities.Entities))
 		//gifts[x].Amazon = make([]string, len(entities.Entities))
 		for y := 0; y < len(entities.Entities); y++ {
+			t := entities.Entities[y].Type.String()
+			if t == "PERSON" || t == "LOCATION" || t == "NUMBER" {
+				continue
+			} else {
 			gifts[x].Gifts[y] = entities.Entities[y].Name
 			gifts[x].Types[y] = entities.Entities[y].Type.String()
 			gifts[x].Sentiments[y] = int(sentiment.DocumentSentiment.Score * 10)
 
 			fmt.Printf("Item: %s\t Type: %s\n", entities.Entities[y].Name, entities.Entities[y].Type)
+			}
 		}
 		x++
 	}
