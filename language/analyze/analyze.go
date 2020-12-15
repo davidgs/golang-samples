@@ -214,15 +214,17 @@ func main() {
 			fmt.Printf("Running task %s. WorkerId: %s. TopicName: %s\n", ctx.Task.Id, ctx.Task.WorkerId, ctx.Task.TopicName)
 			var sentRes camundaclientgo.Variable
 			var err error
+			var nlp bool
 			varb := ctx.Task.Variables
 			text := fmt.Sprintf("%v", varb["letter"].Value)
 			fmt.Println(text)
-			sentRes, err = analyze(text)
+			sentRes, nlp, err = analyze(text)
 			if err != nil {
 				log.Fatal(err)
 			}
 			vars := make(map[string]camundaclientgo.Variable)
 			vars["status"] = camundaclientgo.Variable{Value: "true", Type: "boolean"}
+			vars["nlp"] = camundaclientgo.Variable{Value: strconv.FormatBool(nlp), Type: "boolean"}
 			vars["gifts"] = sentRes
 			err = ctx.Complete(processor.QueryComplete{
 				Variables: &vars,
@@ -289,13 +291,14 @@ err := http.ListenAndServeTLS(":9091", "/home/santa/ssl/certs/write_a_letter_to_
 	}
 }
 
-func analyze(letter string) (camundaclientgo.Variable, error) {
+func analyze(letter string) (camundaclientgo.Variable, bool, error) {
 	var cClient camundaclientgo.Variable
+        var nlp = false;
 	ctx := context.Background()
 	client, err := language.NewClient(ctx, option.WithCredentialsFile("credentials.json"))
 	if err != nil {
 		log.Fatal(err)
-		return cClient, err
+		return cClient, nlp, err
 	}
 
 	doc, _ := prose.NewDocument(letter)
@@ -312,7 +315,7 @@ func analyze(letter string) (camundaclientgo.Variable, error) {
 		sentiment, err := analyzeSentiment(ctx, client, sent.Text)
 		if err != nil {
 			log.Fatal(err)
-			return cClient, err
+			return cClient, false, err
 		}
 		if sentiment.DocumentSentiment.Score >= 0 {
 			fmt.Printf("Sentiment: %1f, positive\t", sentiment.DocumentSentiment.Score)
@@ -333,6 +336,9 @@ func analyze(letter string) (camundaclientgo.Variable, error) {
 			gifts[x].Gifts[y] = entities.Entities[y].Name
 			gifts[x].Types[y] = entities.Entities[y].Type.String()
 			gifts[x].Sentiments[y] = int(sentiment.DocumentSentiment.Score * 10)
+			if entities.Entities[y].Type.String() == "CONSUMER_GOOD" {
+                           nlp = true;
+                        }
 
 			fmt.Printf("Item: %s\t Type: %s\n", entities.Entities[y].Name, entities.Entities[y].Type)
 			}
@@ -343,12 +349,12 @@ func analyze(letter string) (camundaclientgo.Variable, error) {
 	bytes, err := json.Marshal(gifts)
 	if err != nil {
 		log.Fatal(err)
-		return cClient, err
+		return cClient, false,  err
 	}
 	cClient.Value = string(bytes)
 	cClient.Type = "string"
 	cClient.ValueInfo = vInfo
-	return cClient, nil
+	return cClient, nlp, nil
 }
 
 func usage(msg string) {
