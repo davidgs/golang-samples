@@ -143,11 +143,28 @@ func searchAmazon(gResult camundaclientgo.Variable) (camundaclientgo.Variable, e
 
 }
 
+func send_alert() (bool, error) {
+	emailAddr := "davidgs@me.com"
+	var letterBody strings.Builder
+	fmt.Fprintf(&letterBody, "There's a new Santa Letter that needs Attention!\n")
+	d := mail.Dialer{Host: "www.write-a-letter-to-santa.org", Port: 25, Username: "santa", Password: "Toby66.Mime!"}
+	m := mail.NewMessage()
+	m.SetHeader("From", m.FormatAddress("no-reply@write-a-letter-to-santa.org", "Santa Claus"))
+	m.SetHeader("To",  emailAddr)
+	m.SetHeader("Subject", "Santa Letter needs Attention")
+	m.SetBody("text/html", letterBody.String())
+	// m.SetBody("text/plain", letterBody.String())
+	if err := d.DialAndSend(m); err != nil {
+		return false, err
+	}
+	return true, nil
+}
+
 func sendEmail(vars map[string]camundaclientgo.Variable) (bool, error) {
 	var letterBody strings.Builder
 	fmt.Fprintf(&letterBody, "<p>Seasons Greetings!</p>\n<p></p>\n<p>Guess what? %s has written me a letter asking for a few things. As I've now retired to a beach in Thailand, I thought maybe you'd like to know what %s asked for. Here's the letter:</p>\n<p></p>\n<blockquote><i>\"%s\"</i></blockquote>\n<p></p>\n", fmt.Sprintf("%v", vars["name"].Value), fmt.Sprintf("%v", vars["name"].Value), fmt.Sprintf("%v", vars["letter"].Value))
 
-	fmt.Fprintf(&letterBody, "<p>I've taken the liberty of figuring out which things they want most, and provided you with a list so that you can just purchase these items directly. I know, it's put the elves out of work, but they're a resourceful lot and will undoubtedly figure out something to do with themselves. And no, they are not available for purchase.</p>\n<p>So, that list:</p>\n<p></p>\n<od>\n")
+	fmt.Fprintf(&letterBody, "<p>I've taken the liberty of figuring out which things they want most, and provided you with a list so that you can just purchase these items directly. Don't worry, it hasn't put the elves out of work, they've joined the 'Work From Home' movement and are monitoring the process. And no, they are not available for purchase.</p>\n<p>So, that list:</p>\n<p></p>\n<od>\n")
 	var giftLookup Gift
 	json.Unmarshal([]byte(fmt.Sprintf("%v", vars["links"].Value)), &giftLookup)
 	for x := 0; x < len(giftLookup); x++ {
@@ -237,6 +254,30 @@ func main() {
 			return nil
 		},
 	)
+
+	// email alert handler
+	proc.AddHandler(
+		&[]camundaclientgo.QueryFetchAndLockTopic{
+			{TopicName: "email-alert"},
+		},
+		func(ctx *processor.Context) error {
+			fmt.Printf("Running task %s. WorkerId: %s. TopicName: %s\n", ctx.Task.Id, ctx.Task.WorkerId, ctx.Task.TopicName)
+			send_alert();
+
+			vars := make(map[string]camundaclientgo.Variable)
+			vars["status"] = camundaclientgo.Variable{Value: "true", Type: "boolean"}
+			err := ctx.Complete(processor.QueryComplete{
+				Variables: &vars,
+			})
+			if err != nil {
+				fmt.Printf("Error set complete task %s: %s\n", ctx.Task.Id, err)
+			}
+
+			fmt.Printf("Task %s completed\n", ctx.Task.Id)
+			return nil
+		},
+	)
+
 	// Amazon search handler
 	proc.AddHandler(
 		&[]camundaclientgo.QueryFetchAndLockTopic{
